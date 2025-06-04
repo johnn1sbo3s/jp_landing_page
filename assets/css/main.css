@@ -1,0 +1,19 @@
+div {
+  font-family: 'Lexend', sans-serif;
+}
+
+.color-primary {
+  color: #8B5CF6;
+}
+
+.color-neutral {
+  color: #3C3842;
+}
+
+.color-neutral-dark {
+  color: #19161D;
+}
+
+.color-neutral-light {
+  color: #65626A;
+}

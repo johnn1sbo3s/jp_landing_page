@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-screen px-12 py-8 background-design">
+	<div class="w-full min-h-screen px-10 py-8 background-design">
 		<div v-if="$device.isDesktop">
 			<div class="background-lightning" />
 
@@ -85,64 +85,64 @@
 
 		<div
 			v-else
-			class="w-full"
+			class="w-full h-screen"
 		>
-			<div class="w-full flex justify-center">
-				<img
-					src="/img/logo.svg"
-					alt="logo"
-				>
-			</div>
-
-			<div class="text-5xl mt-20 font-black flex flex-col items-start relative">
-				<img
-					class="elipse-detail-mobile"
-					src="/img/elipse-detail.png"
-				>
-
-				<div class="color-neutral z-10">João Paulo</div>
-
-				<div class="color-primary z-10">Castro</div>
-
-				<span class="color-neutral-light z-10 mt-2 text-sm font-light">UX Designer | Frontend Developer</span>
-			</div>
-
-			<div class="text-lg mt-8 font-light color-neutral w-full">
-				Crafting impactful digital solutions for over 6 years. I build intuitive products
-				through front-end development and design, blending code and data to improve lives.
-			</div>
-
-			<div class="flex flex-col w-full gap-4 mt-8">
-				<div
-					class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
-					@click="openLinkedin"
-				>
+			<div class="w-full h-[90svh] relative">
+				<div class="w-full flex justify-center">
 					<img
-						src="/img/linkedin.svg"
-						alt="LinkedIn"
-						width="28"
+						src="/img/logo.svg"
+						alt="logo"
 					>
-
-					<span class="color-neutral-dark">LinkedIn</span>
 				</div>
 
-				<div
-					class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
-					@click="openGithub"
-				>
+				<div class="text-5xl mt-20 font-black flex flex-col items-start">
 					<img
-						src="/img/github.svg"
-						alt="LinkedIn"
-						width="28"
+						class="elipse-detail-mobile"
+						src="/img/elipse-detail.png"
+					>
+
+					<div class="color-neutral z-10">João Paulo</div>
+
+					<div class="color-primary z-10">Castro</div>
+
+					<span class="color-neutral-light z-10 mt-2 text-sm font-light">UX Designer | Frontend Developer</span>
+				</div>
+
+				<div class="text-lg mt-8 font-light color-neutral w-full">
+					Crafting impactful digital solutions for over 6 years. I build intuitive products
+					through front-end development and design, blending code and data to improve lives.
+				</div>
+
+				<div class="flex flex-col w-full gap-4 mt-8">
+					<div
+						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+						@click="openLinkedin"
+					>
+						<img
+							src="/img/linkedin.svg"
+							alt="LinkedIn"
+							width="28"
+						>
+
+						<span class="color-neutral-dark">LinkedIn</span>
+					</div>
+
+					<div
+						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 						@click="openGithub"
 					>
+						<img
+							src="/img/github.svg"
+							alt="LinkedIn"
+							width="28"
+							@click="openGithub"
+						>
 
-					<span class="color-neutral-dark">GitHub</span>
+						<span class="color-neutral-dark">GitHub</span>
+					</div>
 				</div>
-			</div>
 
-			<div class="flex w-full items-center justify-center mt-16 gap-2">
-				<div class="px-4 py-2 text-sm rounded-full bg-violet-500 text-white flex gap-1 items-center">
+				<div class="px-4 py-2 absolute bottom-[5%] left-[30%] text-sm w-fit text-violet-600 flex gap-1 items-center">
 					<div>There's more!</div>
 
 					<Icon
@@ -153,6 +153,7 @@
 				</div>
 			</div>
 		</div>
+
 
 	</div>
 </template>
@@ -174,9 +175,7 @@ function openGithub() {
 .background-design {
 	position: relative;
 	background: #edf0f1;
-	height: 100vh;
 	width: 100vw;
-	overflow: hidden;
 }
 
 .background-lightning {

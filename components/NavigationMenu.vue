@@ -1,5 +1,5 @@
 <template>
-	<div class="flex justify-between justify-self-center max-w-[1920px] items-center w-full">
+	<div class="flex justify-between justify-self-center max-w-[1920px] items-center w-full z-10">
 		<img src="/img/logo.svg" alt="logo">
 
 		<div class="flex items-center gap-8 color-neutral">
@@ -43,7 +43,10 @@
 			</NuxtLink>
 		</div>
 
-		<button class="button-primary">
+		<button
+			class="button-primary hover:shadow-lg hover:shadow-violet-200"
+			@click="openWhatsapp"
+		>
 			Contact me
 		</button>
 	</div>
@@ -57,6 +60,10 @@ defineProps({
 		default: 'home'
 	}
 });
+
+function openWhatsapp() {
+	window.open('https://api.whatsapp.com/send?phone=5574988124897', '_blank');
+}
 
 </script>
 

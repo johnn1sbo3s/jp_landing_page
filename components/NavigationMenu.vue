@@ -29,7 +29,7 @@
 				/>
 			</NuxtLink>
 
-			<NuxtLink
+			<!-- <NuxtLink
 				to="/socials"
 				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
 				:class="activeNavItem === 'socials' ? 'active-nav-item' : ''"
@@ -40,7 +40,7 @@
 					v-if="activeNavItem === 'socials'"
 					class="w-1/3 h-[3px] bg-violet-500"
 				/>
-			</NuxtLink>
+			</NuxtLink> -->
 		</div>
 
 		<button

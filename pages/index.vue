@@ -10,7 +10,7 @@
 			<div class="background-circle" />
 
 
-			<div class="w-full h-[60svh] mt-24 z-50 flex items-center justify-center gap-64">
+			<div class="w-full h-[60svh] -ml-12 mt-24 z-50 flex items-center justify-center gap-64">
 				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10">
 					<div class="text-6xl font-black flex flex-col items-start relative">
 						<NuxtImg

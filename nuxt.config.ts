@@ -1,17 +1,27 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
-  devtools: { enabled: true },
+	compatibilityDate: '2025-05-15',
+	devtools: { enabled: true },
 
-  modules: [
-    '@nuxt/eslint',
-    '@nuxtjs/tailwindcss',
-    '@nuxt/fonts',
-    '@nuxtjs/device',
-    '@nuxt/icon',
-    '@nuxt/image-edge',
-  ],
+	modules: [
+		'@nuxt/eslint',
+		'@nuxtjs/tailwindcss',
+		'@nuxt/fonts',
+		'@nuxtjs/device',
+		'@nuxt/icon',
+		'@nuxt/image-edge',
+		'@nuxt/scripts',
+	],
 
-  css: [
-    '~/assets/css/main.css'
-  ],
+	scripts: {
+		registry: {
+			clarity: {
+				id: 'ruuv9lie14'
+			}
+		}
+	},
+
+	css: [
+		'~/assets/css/main.css'
+	],
 })

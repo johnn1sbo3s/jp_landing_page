@@ -93,6 +93,7 @@
 					<NuxtImg
 						src="/img/logo.svg"
 						alt="logo"
+						width="80px"
 					/>
 				</div>
 
@@ -143,7 +144,7 @@
 					</div>
 				</div>
 
-				<div class="px-4 py-2 absolute bottom-[5%] left-[30%] text-sm w-fit text-violet-600 flex gap-1 items-center">
+				<!-- <div class="px-4 py-2 absolute bottom-[5%] left-[30%] text-sm w-fit text-violet-600 flex gap-1 items-center">
 					<div>There's more!</div>
 
 					<Icon
@@ -151,7 +152,7 @@
 						size="20"
 						class="animate-bounce"
 					/>
-				</div>
+				</div> -->
 			</div>
 		</div>
 

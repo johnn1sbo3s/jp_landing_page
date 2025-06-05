@@ -1,13 +1,14 @@
 <template>
 	<div class="w-full min-h-screen px-10 py-8 background-design">
-		<div v-if="$device.isDesktop">
+		<div v-if="$device.isDesktop" class="w-full flex flex-col items-center">
+			<div class="flex w-4/5 items-center justify-center justify-self-center">
+				<NavigationMenu active-nav-item='home' />
+			</div>
+
 			<div class="background-lightning" />
 
 			<div class="background-circle" />
 
-			<div class="flex w-4/5 items-center justify-center justify-self-center">
-				<NavigationMenu active-nav-item='home' />
-			</div>
 
 			<div class="w-full h-[60svh] mt-24 z-50 flex items-center justify-center gap-64">
 				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10">

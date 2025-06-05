@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/fonts',
     '@nuxtjs/device',
+    '@nuxt/icon',
   ],
 
   css: [

@@ -46,6 +46,11 @@
                             @click="openProject(project.link)"
                         >
                             <span>See project</span>
+
+                            <Icon
+                                name="uil:arrow-up-right"
+                                size="18"
+                            />
                         </button>
                     </div>
                 </template>

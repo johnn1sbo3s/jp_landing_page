@@ -84,8 +84,8 @@ const projects = [
         name: 'Cuida Design System',
         text: `Cuida Design System is a scalable UI framework built to accelerate front-end development
             with consistency and clarity. Designed from scratch with a focus on real-world usability,
-            it brings together a clean component library, token-based theming, and flexible layouts—all
-            optimized for Vue. Over time, I’ve built and refined 40+ components for it,
+            it brings together a clean component library, token-based theming, and flexible layouts.
+            Over time, I’ve built and refined 30+ components for it,
             with full support for responsive design and accessibility. The system is
             documented, versioned, and ready for integration in fast-moving product teams. Cuida
             isn’t just a UI kit, it’s a design-engineering bridge that speeds up delivery without

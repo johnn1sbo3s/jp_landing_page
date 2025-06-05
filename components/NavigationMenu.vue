@@ -1,6 +1,11 @@
 <template>
 	<div class="flex justify-between justify-self-center max-w-[1920px] items-center w-full z-10">
-		<img src="/img/logo.svg" alt="logo">
+		<NuxtImg
+			class="cursor-pointer"
+			src="/img/logo.svg"
+			alt="logo"
+			@click="redirectToHome"
+		/>
 
 		<div class="flex items-center gap-8 color-neutral">
 			<NuxtLink
@@ -60,6 +65,12 @@ defineProps({
 		default: 'home'
 	}
 });
+
+const router = useRouter();
+
+function redirectToHome() {
+	router.push('/');
+}
 
 function openWhatsapp() {
 	window.open('https://api.whatsapp.com/send?phone=5574988124897', '_blank');

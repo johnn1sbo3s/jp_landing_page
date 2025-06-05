@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/device',
     '@nuxt/icon',
+    '@nuxt/image-edge',
   ],
 
   css: [

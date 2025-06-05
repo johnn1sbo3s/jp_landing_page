@@ -13,10 +13,10 @@
 			<div class="w-full h-[60svh] mt-24 z-50 flex items-center justify-center gap-64">
 				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10">
 					<div class="text-6xl font-black flex flex-col items-start relative">
-						<img
+						<NuxtImg
 							class="elipse-detail"
 							src="/img/elipse-detail.png"
-						>
+						/>
 
 						<div class="color-neutral z-10">João Paulo</div>
 
@@ -35,10 +35,10 @@
 							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 							@click="openLinkedin"
 						>
-							<img
+							<NuxtImg
 								src="/img/linkedin.svg"
 								alt="LinkedIn"
-							>
+							/>
 
 							<span class="color-neutral-dark">LinkedIn</span>
 						</div>
@@ -47,10 +47,10 @@
 							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 							@click="openGithub"
 						>
-							<img
+							<NuxtImg
 								src="/img/github.svg"
 								alt="GitHub"
-							>
+							/>
 
 							<span class="color-neutral-dark">GitHub</span>
 						</div>
@@ -58,28 +58,28 @@
 				</div>
 
 				<div class="relative flex justify-center">
-					<img
+					<NuxtImg
 						class="ux-card"
 						src="/img/ux-card.svg"
 						alt="UX Card"
-					>
+					/>
 
-					<img
+					<NuxtImg
 						class="frontend-card"
 						src="/img/frontend-card.svg"
 						alt="Frontend Card"
-					>
+					/>
 
-				<img
-					class="data-science-card"
-					src="/img/data-science-card.svg"
-					alt="Data Science Card"
-				>
+					<NuxtImg
+						class="data-science-card"
+						src="/img/data-science-card.svg"
+						alt="Data Science Card"
+					/>
 
-				<img
-					src="/img/picture.svg"
-					alt="Picture"
-				>
+					<NuxtImg
+						src="/img/picture.svg"
+						alt="Picture"
+					/>
 				</div>
 			</div>
 		</div>
@@ -90,17 +90,17 @@
 		>
 			<div class="w-full h-[90svh] relative">
 				<div class="w-full flex justify-center">
-					<img
+					<NuxtImg
 						src="/img/logo.svg"
 						alt="logo"
-					>
+					/>
 				</div>
 
 				<div class="text-5xl mt-20 font-black flex flex-col items-start">
-					<img
+					<NuxtImg
 						class="elipse-detail-mobile"
 						src="/img/elipse-detail.png"
-					>
+					/>
 
 					<div class="color-neutral z-10">João Paulo</div>
 
@@ -119,11 +119,11 @@
 						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 						@click="openLinkedin"
 					>
-						<img
+						<NuxtImg
 							src="/img/linkedin.svg"
 							alt="LinkedIn"
 							width="28"
-						>
+						/>
 
 						<span class="color-neutral-dark">LinkedIn</span>
 					</div>
@@ -132,12 +132,12 @@
 						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 						@click="openGithub"
 					>
-						<img
+						<NuxtImg
 							src="/img/github.svg"
 							alt="LinkedIn"
 							width="28"
 							@click="openGithub"
-						>
+						/>
 
 						<span class="color-neutral-dark">GitHub</span>
 					</div>

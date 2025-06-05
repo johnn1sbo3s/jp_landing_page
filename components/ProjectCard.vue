@@ -4,22 +4,22 @@
 
 		<div class="w-full h-[260px] relative">
 			<div class="image-container">
-				<img
+				<NuxtImg
 					:src="imageSrc"
 					alt="DataPlay Bets Logo"
-				>
+				/>
 			</div>
 
 			<div
 				class="relative overflow-hidden w-full h-[260px] flex flex-col gap-4 justify-center py-4 px-12 rounded-2xl card-content"
 				:style="{ background: gradientColor }"
 			>
-				<img
+				<NuxtImg
 					v-if="logoSrc"
 					:src="logoSrc"
 					alt="Dataplay bets logo"
 					width="150px"
-				>
+				/>
 
 				<div class="w-[55%] text-sm">
 					{{ text }}

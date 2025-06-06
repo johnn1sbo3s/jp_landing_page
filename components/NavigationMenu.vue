@@ -1,11 +1,12 @@
 <template>
-	<div class="flex justify-between justify-self-center max-w-[1920px] items-center w-full z-10">
-		<NuxtImg
+	<div v-if="$device.isDesktop" class="flex justify-between justify-self-center max-w-[1920px] items-center w-full z-10">
+		<img
 			class="cursor-pointer"
 			src="/img/logo.svg"
 			alt="logo"
+			width="75px"
 			@click="redirectToHome"
-		/>
+		>
 
 		<div class="flex items-center gap-8 color-neutral">
 			<NuxtLink
@@ -33,19 +34,6 @@
 					class="w-1/3 h-[3px] bg-violet-500"
 				/>
 			</NuxtLink>
-
-			<!-- <NuxtLink
-				to="/socials"
-				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
-				:class="activeNavItem === 'socials' ? 'active-nav-item' : ''"
-			>
-				<span>Socials</span>
-
-				<div
-					v-if="activeNavItem === 'socials'"
-					class="w-1/3 h-[3px] bg-violet-500"
-				/>
-			</NuxtLink> -->
 		</div>
 
 		<button
@@ -54,6 +42,39 @@
 		>
 			Contact me
 		</button>
+	</div>
+
+	<div
+		v-else
+		class="w-full flex items-center justify-center"
+	>
+		<div class="flex items-center gap-4 color-neutral">
+			<NuxtLink
+				to="/"
+				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
+				:class="activeNavItem === 'home' ? 'active-nav-item' : ''"
+			>
+				<span>Home</span>
+
+				<div
+					v-if="activeNavItem === 'home'"
+					class="w-1/3 h-[3px] bg-violet-500 border-radius-full"
+				/>
+			</NuxtLink>
+
+			<NuxtLink
+				to="/portfolio"
+				class="cursor-pointer hover:text-violet-500 h-[44px] w-[100px] flex flex-col justify-center items-center"
+				:class="activeNavItem === 'portfolio' ? 'active-nav-item' : ''"
+			>
+				<span>Portfolio</span>
+
+				<div
+					v-if="activeNavItem === 'portfolio'"
+					class="w-1/3 h-[3px] bg-violet-500"
+				/>
+			</NuxtLink>
+		</div>
 	</div>
 </template>
 

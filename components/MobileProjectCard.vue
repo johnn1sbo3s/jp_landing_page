@@ -1,17 +1,10 @@
 <template>
-	<div class="w-full flex flex-col gap-3 z-10">
+	<div class="w-full flex flex-col gap-2 z-10">
 		<slot name="title"/>
 
-		<div class="w-full h-[260px] relative">
-			<div class="image-container">
-				<img
-					:src="imageSrc"
-					alt="DataPlay Bets Logo"
-				>
-			</div>
-
+		<div class="w-full">
 			<div
-				class="relative overflow-hidden w-full h-[260px] flex flex-col gap-4 justify-center py-4 px-12 rounded-2xl card-content"
+				class="relative overflow-hidden w-full flex flex-col gap-4 justify-center py-5 px-5 rounded-2xl card-content"
 				:style="{ background: gradientColor }"
 			>
 				<img
@@ -21,7 +14,7 @@
 					width="150px"
 				>
 
-				<div class="w-[55%] text-sm">
+				<div class="text-sm">
 					{{ text }}
 				</div>
 
@@ -86,14 +79,14 @@ const computedTextColor = computed(() => props.textColor);
 
 .light-effect {
 	position: absolute;
-	top: -3%;
-	right: 5%;
+	top: -30%;
+	right: -25%;
 	height: 300px;
 	width: 300px;
 	background: v-bind(lightEffectColor);
 	border-radius: 50%;
 	filter: blur(60px);
-	opacity: 0.3;
+	opacity: 0.12;
 }
 
 </style>

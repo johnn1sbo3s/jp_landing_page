@@ -1,62 +1,115 @@
 <template>
-    <div class="w-full flex flex-col items-center h-full px-10 py-8 background-design">
-        <div class="flex w-4/5 items-center justify-center justify-self-center">
-            <NavigationMenu active-nav-item='portfolio' />
-        </div>
-
-        <div class="background-lightning" />
-
-        <div class="background-circle" />
-
-        <div class="flex flex-col items-center justify-center gap-3">
-            <div class="w-full mt-24 flex justify-center text-6xl font-black">
-                <div class="color-primary">My</div>
-
-                <div class="color-neutral">Portfolio</div>
-
-                <div class="color-primary">.</div>
+    <div class="h-full">
+        <template v-if="$device.isDesktop">
+            <div class="flex w-4/5 items-center justify-center justify-self-center">
+                <NavigationMenu active-nav-item='portfolio' />
             </div>
 
-            <div class="text-xl text-gray-400 font-light">A collection of my work</div>
-        </div>
+            <div class="background-lightning" />
 
-        <div class="flex flex-col w-4/5 gap-16 my-20">
-            <ProjectCard
-                v-for="project in projects"
-                :key="project.name"
-                :text="project.text"
-                :image-src="project.imageSrc"
-                :light-effect-color="project.lightEffectColor"
-                :text-color="project.textColor"
-                :gradient-color="project.gradient"
-                :logo-src="project.logoSrc"
-            >
-                <template #title>
-                    <div class="flex items-center justify-between gap-3">
-                        <div
-                            class="text-2xl font-bold flex gap-1 hover:underline cursor-pointer"
-                            :style="{ color: project.titleColor }"
-                            @click="openProject(project.link)"
-                        >
-                            {{ project.name }}
-                        </div>
+            <div class="background-circle" />
 
-                        <button
-                            class="project-link text-sm bg-none cursor-pointer hover:bg-violet-200 text-violet-500 py-2 px-4 rounded-md flex items-center gap-1"
-                            @click="openProject(project.link)"
-                        >
-                            <span>See project</span>
+            <div class="flex flex-col items-center justify-center gap-3">
+                <div class="w-full mt-24 flex justify-center text-6xl font-black">
+                    <div class="color-primary">My</div>
 
-                            <Icon
-                                name="uil:arrow-up-right"
-                                size="18"
-                            />
-                        </button>
-                    </div>
-                </template>
-            </ProjectCard>
+                    <div class="color-neutral">Portfolio</div>
+
+                    <div class="color-primary">.</div>
+                </div>
+
+                <div class="text-xl text-gray-400 font-light">A collection of my work</div>
+
+                <div class="flex flex-col justify-center w-4/5 gap-16 my-20">
+                    <ProjectCard
+                        v-for="project in projects"
+                        :key="project.name"
+                        :text="project.text"
+                        :image-src="project.imageSrc"
+                        :light-effect-color="project.lightEffectColor"
+                        :text-color="project.textColor"
+                        :gradient-color="project.gradient"
+                        :logo-src="project.logoSrc"
+                    >
+                        <template #title>
+                            <div class="flex items-center justify-between gap-3">
+                                <div
+                                    class="text-2xl font-bold flex gap-1 hover:underline cursor-pointer"
+                                    :style="{ color: project.titleColor }"
+                                    @click="openProject(project.link)"
+                                >
+                                    {{ project.name }}
+                                </div>
+
+                                <button
+                                    class="project-link text-sm bg-none cursor-pointer hover:bg-violet-200 text-violet-500 py-2 px-4 rounded-md flex items-center gap-1"
+                                    @click="openProject(project.link)"
+                                >
+                                    <span>See project</span>
+
+                                    <Icon
+                                        name="uil:arrow-up-right"
+                                        size="18"
+                                    />
+                                </button>
+                            </div>
+                        </template>
+                    </ProjectCard>
+                </div>
+            </div>
+
+        </template>
+
+        <div
+            v-else
+            class="w-full h-full mt-4"
+        >
+            <div class="w-full h-full flex flex-col">
+                <div class="w-full flex justify-center">
+                    <img
+                        src="/img/logo.svg"
+                        alt="logo"
+                        width="80px"
+                    >
+                </div>
+
+                <div class="mt-5">
+                    <NavigationMenu active-nav-item="portfolio" />
+                </div>
+
+                <div class="flex flex-col justify-center w-full gap-12 my-12">
+                    <MobileProjectCard
+                        v-for="project in projects"
+                        :key="project.name"
+                        :text="project.text"
+                        :image-src="project.imageSrc"
+                        :light-effect-color="project.lightEffectColor"
+                        :text-color="project.textColor"
+                        :gradient-color="project.gradient"
+                        :logo-src="project.logoSrc"
+                    >
+                        <template #title>
+                            <div
+                                class="text-xl w-fit font-bold flex gap-2 hover:underline items-center cursor-pointer"
+                                :style="{ color: project.titleColor }"
+                                @click="openProject(project.link)"
+                            >
+                                {{ project.name }}
+
+                                <Icon
+                                    class="mt-0.5"
+                                    name="uil:arrow-up-right"
+                                    size="24"
+                                />
+                            </div>
+
+                        </template>
+                    </MobileProjectCard>
+                </div>
+            </div>
         </div>
     </div>
+
 </template>
 
 <script setup>
@@ -116,15 +169,6 @@ const projects = [
         link: 'https://www.figma.com/design/8SNVK0EsBUh60hhA4Z3LKR/Dentuxo-Board?t=1qppbG2ZhppeNKV8-0',
     },
 ]
-
-const device = useDevice();
-const router = useRouter();
-
-onMounted(() => {
-    if (!device.isDesktop) {
-        router.push('/');
-    }
-});
 
 function openProject(link) {
     window.open(link, '_blank');

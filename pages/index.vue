@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full min-h-screen px-10 py-8 background-design">
+	<div>
 		<div v-if="$device.isDesktop" class="w-full flex flex-col items-center">
 			<div class="flex w-4/5 items-center justify-center justify-self-center">
 				<NavigationMenu active-nav-item='home' />
@@ -9,14 +9,13 @@
 
 			<div class="background-circle" />
 
-
 			<div class="w-full h-[60svh] -ml-12 mt-24 z-50 flex items-center justify-center gap-64">
 				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10">
 					<div class="text-6xl font-black flex flex-col items-start relative">
-						<NuxtImg
+						<img
 							class="elipse-detail"
 							src="/img/elipse-detail.png"
-						/>
+						>
 
 						<div class="color-neutral z-10">João Paulo</div>
 
@@ -35,10 +34,10 @@
 							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 							@click="openLinkedin"
 						>
-							<NuxtImg
+							<img
 								src="/img/linkedin.svg"
 								alt="LinkedIn"
-							/>
+							>
 
 							<span class="color-neutral-dark">LinkedIn</span>
 						</div>
@@ -47,10 +46,10 @@
 							class="bg-white hover:shadow-lg hover:shadow-blue-100 z-50 w-full cursor-pointer outline-0 hover:outline-1 hover:outline-blue-400 flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 							@click="openGithub"
 						>
-							<NuxtImg
+							<img
 								src="/img/github.svg"
 								alt="GitHub"
-							/>
+							>
 
 							<span class="color-neutral-dark">GitHub</span>
 						</div>
@@ -58,50 +57,55 @@
 				</div>
 
 				<div class="relative flex justify-center">
-					<NuxtImg
+					<img
 						class="ux-card"
 						src="/img/ux-card.svg"
 						alt="UX Card"
-					/>
+					>
 
-					<NuxtImg
+					<img
 						class="frontend-card"
 						src="/img/frontend-card.svg"
 						alt="Frontend Card"
-					/>
+					>
 
-					<NuxtImg
+					<img
 						class="data-science-card"
 						src="/img/data-science-card.svg"
 						alt="Data Science Card"
-					/>
+					>
 
-					<NuxtImg
+					<img
 						src="/img/picture.svg"
 						alt="Picture"
-					/>
+						width="400%"
+					>
 				</div>
 			</div>
 		</div>
 
 		<div
 			v-else
-			class="w-full h-screen"
+			class="w-full h-full mt-4"
 		>
-			<div class="w-full h-[90svh] relative">
+			<div class="w-full h-full flex flex-col justify-center">
 				<div class="w-full flex justify-center">
-					<NuxtImg
+					<img
 						src="/img/logo.svg"
 						alt="logo"
 						width="80px"
-					/>
+					>
 				</div>
 
-				<div class="text-5xl mt-20 font-black flex flex-col items-start">
-					<NuxtImg
+				<div class="mt-5">
+					<NavigationMenu active-nav-item='home' />
+				</div>
+
+				<div class="text-5xl mt-16 font-black relative flex flex-col items-start">
+					<img
 						class="elipse-detail-mobile"
 						src="/img/elipse-detail.png"
-					/>
+					>
 
 					<div class="color-neutral z-10">João Paulo</div>
 
@@ -120,11 +124,11 @@
 						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 						@click="openLinkedin"
 					>
-						<NuxtImg
+						<img
 							src="/img/linkedin.svg"
 							alt="LinkedIn"
 							width="28"
-						/>
+						>
 
 						<span class="color-neutral-dark">LinkedIn</span>
 					</div>
@@ -133,30 +137,31 @@
 						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
 						@click="openGithub"
 					>
-						<NuxtImg
+						<img
 							src="/img/github.svg"
 							alt="LinkedIn"
 							width="28"
 							@click="openGithub"
-						/>
+						>
 
 						<span class="color-neutral-dark">GitHub</span>
 					</div>
+
+					<div
+						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
+						@click="openWhatsapp"
+					>
+						<Icon
+							name="uil:whatsapp"
+							size="26"
+							style="color: #6D99F5"
+						/>
+
+						<span class="color-neutral-dark">Contact me</span>
+					</div>
 				</div>
-
-				<!-- <div class="px-4 py-2 absolute bottom-[5%] left-[30%] text-sm w-fit text-violet-600 flex gap-1 items-center">
-					<div>There's more!</div>
-
-					<Icon
-						name="uil:angle-double-down"
-						size="20"
-						class="animate-bounce"
-					/>
-				</div> -->
 			</div>
 		</div>
-
-
 	</div>
 </template>
 
@@ -170,12 +175,15 @@ function openGithub() {
 	window.open('https://github.com/johnn1sbo3s/', '_blank');
 }
 
+function openWhatsapp() {
+	window.open('https://api.whatsapp.com/send?phone=5574988124897', '_blank');
+}
+
 </script>
 
 <style lang="css" scoped>
 
 .background-design {
-	position: relative;
 	background: #edf0f1;
 	width: 100vw;
 }

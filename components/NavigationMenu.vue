@@ -38,7 +38,7 @@
 
 		<button
 			class="button-primary hover:shadow-lg hover:shadow-violet-200"
-			@click="openWhatsapp"
+			@click="openEmail"
 		>
 			Contact me
 		</button>
@@ -93,8 +93,8 @@ function redirectToHome() {
 	router.push('/');
 }
 
-function openWhatsapp() {
-	window.open('https://api.whatsapp.com/send?phone=5574988124897', '_blank');
+function openEmail() {
+	window.location.href = 'mailto:joaopaulocastro@gmail.com';
 }
 
 </script>

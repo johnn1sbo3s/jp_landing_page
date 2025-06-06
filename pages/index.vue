@@ -149,10 +149,10 @@
 
 					<div
 						class="bg-white w-full flex items-center justify-center gap-3 py-4 px-8 rounded-2xl"
-						@click="openWhatsapp"
+						@click="openEmail"
 					>
 						<Icon
-							name="uil:whatsapp"
+							name="uil:envelope"
 							size="26"
 							style="color: #6D99F5"
 						/>
@@ -175,8 +175,8 @@ function openGithub() {
 	window.open('https://github.com/johnn1sbo3s/', '_blank');
 }
 
-function openWhatsapp() {
-	window.open('https://api.whatsapp.com/send?phone=5574988124897', '_blank');
+function openEmail() {
+	window.location.href = 'mailto:joaopaulocastro@gmail.com';
 }
 
 </script>

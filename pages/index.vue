@@ -86,7 +86,7 @@
 
 		<div
 			v-else
-			class="w-full h-full mt-4"
+			class="w-full h-full mt-2"
 		>
 			<div class="w-full h-full flex flex-col justify-center">
 				<div class="w-full flex justify-center">

@@ -62,7 +62,7 @@
 
         <div
             v-else
-            class="w-full h-full mt-4"
+            class="w-full h-full mt-2"
         >
             <div class="w-full h-full flex flex-col">
                 <div class="w-full flex justify-center">
@@ -77,7 +77,7 @@
                     <NavigationMenu active-nav-item="portfolio" />
                 </div>
 
-                <div class="flex flex-col justify-center w-full gap-12 my-12">
+                <div class="flex flex-col justify-center w-full gap-12 mt-8 mb-16">
                     <MobileProjectCard
                         v-for="project in projects"
                         :key="project.name"

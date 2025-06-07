@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+# 🌐 João Paulo's Personal Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is my personal portfolio website built using **Nuxt 3** and **Tailwind CSS**. It serves as a space to showcase my work, highlight featured projects, and share a bit more about who I am as a developer.
 
-## Setup
+## 🛠️ Technologies
 
-Make sure to install dependencies:
+- [Nuxt 3](https://nuxt.com/)
+- [Vue.js](https://vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) for deployment
 
-```bash
-# npm
-npm install
+## 🎯 Purpose
 
-# pnpm
-pnpm install
+- Showcase my professional profile and side projects
+- Practice and deepen my skills in **Nuxt 3** and **Tailwind CSS**
+- Provide a clean and responsive experience, with accessibility improvements planned
 
-# yarn
-yarn install
+## 📌 Roadmap
 
-# bun
-bun install
-```
+- [x] Project structure and base layout
+- [x] Projects section with links
+- [ ] Improve mobile responsiveness
+- [ ] Enhance accessibility (WCAG)
+- [ ] Add blog and other content pages
 
-## Development Server
+## 🚀 Live Site
 
-Start the development server on `http://localhost:3000`:
+👉 [https://jonedev.vercel.app](https://jonedev.vercel.app)
 
-```bash
-# npm
-npm run dev
+---
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Made with ❤️ and too much tweaking in Figma.

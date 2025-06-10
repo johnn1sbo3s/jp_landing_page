@@ -250,7 +250,6 @@ function openEmail() {
 @media (max-width: 1500px) {
 	.illustration-container {
 		display: none;
-		background: red;
 	}
 
 	.left-information {

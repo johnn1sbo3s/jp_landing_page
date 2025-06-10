@@ -3,7 +3,7 @@
 		<slot name="title"/>
 
 		<div class="w-full h-[260px] relative">
-			<div class="image-container hidden lg:block md:hidden sm:hidden">
+			<div class="image-container">
 				<img
 					:src="imageSrc"
 					alt="Project image"
@@ -21,7 +21,7 @@
 					width="150px"
 				>
 
-				<div class="lg:w-[55%] text-sm sm:w-full z-10">
+				<div class="lg:w-[55%] text-sm z-10 text-container">
 					{{ text }}
 				</div>
 
@@ -94,6 +94,16 @@ const computedTextColor = computed(() => props.textColor);
 	border-radius: 50%;
 	filter: blur(60px);
 	opacity: 0.3;
+}
+
+@media (max-width: 1400px) {
+	.image-container {
+		display: none;
+	}
+
+	.text-container {
+		width: 100%;
+	}
 }
 
 </style>

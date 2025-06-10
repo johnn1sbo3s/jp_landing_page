@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<div v-if="$device.isDesktop" class="w-full flex flex-col items-center">
+		<div
+			v-if="$device.isDesktop"
+			class="w-full flex flex-col items-center"
+		>
 			<div class="flex w-4/5 items-center justify-center justify-self-center">
 				<NavigationMenu active-nav-item='home' />
 			</div>
@@ -10,7 +13,7 @@
 			<div class="background-circle" />
 
 			<div class="w-full h-[60svh] -ml-12 mt-24 z-50 flex items-center justify-center gap-64">
-				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10">
+				<div class="flex flex-col gap-3 max-w-[500px] mt-5 -ml-10 left-information">
 					<div class="text-6xl font-black flex flex-col items-start relative">
 						<img
 							class="elipse-detail"
@@ -56,7 +59,7 @@
 					</div>
 				</div>
 
-				<div class="relative flex justify-center">
+				<div class="relative justify-center illustration-container">
 					<img
 						class="ux-card"
 						src="/img/ux-card.svg"
@@ -242,6 +245,17 @@ function openEmail() {
 	position: absolute;
 	bottom: -12%;
 	right: 30%;
+}
+
+@media (max-width: 1500px) {
+	.illustration-container {
+		display: none;
+		background: red;
+	}
+
+	.left-information {
+		margin-left: 0;
+	}
 }
 
 </style>

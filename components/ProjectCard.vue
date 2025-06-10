@@ -3,10 +3,10 @@
 		<slot name="title"/>
 
 		<div class="w-full h-[260px] relative">
-			<div class="image-container">
+			<div class="image-container hidden lg:block md:hidden sm:hidden">
 				<img
 					:src="imageSrc"
-					alt="DataPlay Bets Logo"
+					alt="Project image"
 				>
 			</div>
 
@@ -17,11 +17,11 @@
 				<img
 					v-if="logoSrc"
 					:src="logoSrc"
-					alt="Dataplay bets logo"
+					alt="Project logo"
 					width="150px"
 				>
 
-				<div class="w-[55%] text-sm">
+				<div class="lg:w-[55%] text-sm sm:w-full z-10">
 					{{ text }}
 				</div>
 

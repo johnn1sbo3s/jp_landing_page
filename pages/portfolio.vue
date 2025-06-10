@@ -1,6 +1,6 @@
 <template>
     <div class="h-full">
-        <template v-if="$device.isDesktop">
+        <div v-if="$device.isDesktop" class="flex flex-col items-center justify-between">
             <div class="flex w-4/5 items-center justify-center justify-self-center">
                 <NavigationMenu active-nav-item='portfolio' />
             </div>
@@ -57,8 +57,7 @@
                     </ProjectCard>
                 </div>
             </div>
-
-        </template>
+        </div>
 
         <div
             v-else

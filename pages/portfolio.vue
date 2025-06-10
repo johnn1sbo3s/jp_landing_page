@@ -168,6 +168,67 @@ const projects = [
         textColor: '#3F1D10',
         link: 'https://www.figma.com/design/8SNVK0EsBUh60hhA4Z3LKR/Dentuxo-Board?t=1qppbG2ZhppeNKV8-0',
     },
+    {
+        name: 'Minha Vez',
+        text: `Minha Vez is an innovative dashboard that optimizes the management of service queues,
+            organizing daily calls based on priorities defined by the reception desk. I actively participated
+            in the initial conception of the project, creating flows and interactions that ensure an efficient
+            and intuitive user experience. In addition, I managed the development team as Scrum Master, ensuring
+            the delivery of a high-quality product that transforms the way services are organized.`,
+        imageSrc: '/img/minha-vez.svg',
+        logoSrc: '/img/minha-vez-logo.svg',
+        lightEffectColor: '#736EEC',
+        gradient: 'linear-gradient(72deg, #E2DEFF -8.58%, #F4F4FF 18.07%, #FFF 61.68%), #D9D9D9',
+        titleColor: '#6174D1',
+        textColor: '#030B33',
+        link: 'https://minhavez.com.br/',
+    },
+    {
+        name: 'Cidade Saudável',
+        text: `Cidade Saudável is a web platform designed to support public health management across
+            municipalities, with over 10 modules covering areas like Regulation, Endemic Control, and Family Health.
+            I designed the landing page and have been actively involved in the platform’s ongoing evolution,
+            creating new modules and improving existing ones. The project has impacted more than 2 million
+            citizens and supports over 6,000 healthcare professionals. My work spans UI/UX design, front-end
+            development, and continuous improvement.`,
+        imageSrc: '/img/cidade-saudavel.svg',
+        logoSrc: '/img/cidade-saudavel-logo.svg',
+        lightEffectColor: '#26AD5B',
+        gradient: 'linear-gradient(72deg, #20AD57 -8.58%, #25B55D 41.92%, #45E885 105.59%)',
+        titleColor: '#25BC60',
+        textColor: '#FFFFFF',
+        link: 'https://cidadesaudavel.com/',
+    },
+    {
+        name: 'Habitação',
+        text: `The Housing Project streamlines government housing applications. Citizens apply through
+            an intuitive form, with the system supporting multiple programs. A robust CMS allows administrators
+            to manage these programs and applications efficiently. I was involved from the start, designing the
+            landing page and citizen forms to ensure a user-friendly experience. Additionally, I contributed
+            to the CMS development, creating a seamless process for both applicants and administrators.`,
+        imageSrc: '/img/habitacao.svg',
+        logoSrc: '',
+        lightEffectColor: '#ED3A0E',
+        gradient: 'linear-gradient(72deg, #FF8567 -8.58%, #FFAE6A 16.12%, #FFB66A 105.59%)',
+        titleColor: '#FF7C5C',
+        textColor: '#41190A',
+        link: 'https://habitacao.sysvale.com/',
+    },
+    {
+        name: 'Landing Page - Sysvale',
+        text: `I designed and assisted in the implementation of the company's landing page,
+            focusing on creating a visually appealing and user-friendly experience. The goal was to effectively
+            communicate the brand's message and guide visitors to key information and services. My contributions
+            included the initial design concepts, user interface elements, and collaboration with the development
+            team to ensure a seamless and responsive final product.`,
+        imageSrc: '/img/sysvale.svg',
+        logoSrc: '/img/sysvale-logo.svg',
+        lightEffectColor: '#012147',
+        gradient: 'linear-gradient(72deg, #07346B -8.58%, #0C4B97 57.84%, #1579F3 105.59%)',
+        titleColor: '#07346A',
+        textColor: '#FFFFFF',
+        link: 'https://sysvale.com/',
+    },
 ]
 
 function openProject(link) {
